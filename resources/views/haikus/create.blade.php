@@ -4,6 +4,8 @@
 
 <h1>徒然なるままに…</h1>
 
+    
+
     {!! Form::model($haiku, ['route' => 'haikus.store']) !!}
 
         {!! Form::label('first', '初句:') !!}

@@ -46,6 +46,12 @@ class HaikusController extends Controller
      */
     public function store(Request $request)
     {
+         $this->validate($request, [
+            'first' => 'required|max:5',
+            'second' => 'required|max:7',
+            'third' => 'required|max:5',
+        ]);
+        
         $haiku = new Haiku;
         $haiku->first = $request->first;
         $haiku->second = $request->second;
@@ -94,7 +100,13 @@ class HaikusController extends Controller
      */
     public function update(Request $request, $id)
     {
-         $haiku = Haiku::find($id);
+        $this->validate($request, [
+            'first' => 'required|max:5',
+            'second' => 'required|max:7',
+            'third' => 'required|max:5',
+        ]);
+        
+        $haiku = Haiku::find($id);
         $haiku->first = $request->first;
         $haiku->second = $request->second;
         $haiku->third = $request->third;
