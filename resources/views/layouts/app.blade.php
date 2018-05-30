@@ -6,8 +6,7 @@
     </head>
 
     <body>
-        @yield('first')
-        @yield('second')
-        @yield('third')
+        @yield('content')
+       
     </body>
 </html>
