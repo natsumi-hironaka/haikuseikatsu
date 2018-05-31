@@ -2,17 +2,11 @@
 
 @section('content')
 
+<img class="waku" src="{{ asset('image/araiguma.jpg') }}" alt="waku">
 
-
-    <h1>俳句一覧</h1>
 
     @if (count($haikus) > 0)
         <table  class="table table-striped">
-            <thead>
-                <tr>
-                    <th>id</th>
-                </tr>
-            </thead>
             <tbody>
             @foreach ($haikus as $haiku)
                 <tr><td>{!! link_to_route('haikus.show', $haiku->id, ['id' => $haiku->id]) !!}</td>

@@ -35,6 +35,8 @@
             {!! Form::submit('この句を消す', ['class' => 'btn btn-danger']) !!}
         </div>
         
+    
+        
     {!! Form::close() !!}
     
 @endsection
