@@ -25,6 +25,6 @@
         </table>
     @endif
     
- {!! link_to_route('haikus.create', 'ここで一句！！' ,null, ['class' => 'btn btn-warning']) !!}
+ {!! link_to_route('haikus.create', 'ここで一句' ,null, ['class' => 'btn btn-warning']) !!}
 
 @endsection
