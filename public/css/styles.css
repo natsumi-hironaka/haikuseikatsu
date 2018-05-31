@@ -4,6 +4,7 @@
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
      margin:auto;
+     padding-top: 5%;
 }
 
 .kunoshousai{
@@ -12,7 +13,7 @@
 
 .aratamu {
     text-align:center;
-    padding-top: 30%;
+    padding-top: 25%;
 }
 
 .kesu {

@@ -4,7 +4,21 @@
 @section('content')
 
 
- <h4 class="kunoshousai"> {{ $haiku->id }} 句の詳細</h4>
+
+
+    
+
+
+
+ <h4 class="kunoshousai"> {{ $haiku->id }}句 : 
+        
+        @if ($haiku->updated_at!=null)
+        {{$haiku->updated_at}} 
+        
+        @else 
+        {{$haiku->created_at}} 
+        
+        @endif</h4>
 
         
          <h2 id="shousai">
