@@ -1,0 +1,6 @@
+@charset "UTF-8";
+
+#shousai{
+    -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+}
