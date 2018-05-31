@@ -8,18 +8,15 @@
 
         
          <h2 id="shousai">
-            {{ $haiku->first}}<br>
-         
-         
-            {{ $haiku->second }}<br>
-        
-        
-            {{ $haiku->third}}
+           <p> {{ $haiku->first}}</p><br>
+           <p> {{ $haiku->second }}</p><br>
+           <p>{{ $haiku->third}}</p>
         </h2>
         
         <div class="aratamu">
             {!! link_to_route('haikus.edit', 'この句をあらたむ', ['id' => $haiku->id], ['class' => 'btn btn-success']) !!}
-
+        </div>    
+        <div class="kesu">
             {!! Form::model($haiku, ['route' => ['haikus.destroy', $haiku->id], 'method' => 'delete']) !!}
             {!! Form::submit('この句を消す', ['class' => 'btn btn-danger']) !!}
         </div>
