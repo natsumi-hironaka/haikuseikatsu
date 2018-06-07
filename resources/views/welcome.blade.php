@@ -2,8 +2,9 @@
 
 @section('content')
     @if (Auth::check())
-        <?php $user = Auth::user(); ?>
-        {{ $user->name }}
+        @if(count($haikus)>0)
+            @include('haikus.index',['haikus' => $haikus])
+        @endif
     @else
         <div class="center jumbotron">
             <div class="text-center">

@@ -11,11 +11,13 @@
 |
 */
 
-Route::get('/', 'HaikusController@index');
-
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/', 'HaikusController@index');
+
 
 Route::resource('haikus', 'HaikusController');
 
@@ -30,4 +32,5 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout.get');
 
 Route::group(['middleware' => ['auth']], function () {
     Route::resource('users', 'UsersController', ['only' => ['index', 'show']]);
+    Route::resource('haikus', 'HaikusController', ['only' => ['store', 'destroy']]);
 });
