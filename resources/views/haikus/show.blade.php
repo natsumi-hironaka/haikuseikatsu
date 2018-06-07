@@ -3,13 +3,6 @@
 
 @section('content')
 
-
-
-
-    
-
-
-
  <h4 class="kunoshousai"> {{ $haiku->id }}句 : 
         
         @if ($haiku->updated_at!=null)

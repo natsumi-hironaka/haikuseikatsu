@@ -13,4 +13,8 @@
 
 Route::get('/', 'HaikusController@index');
 
+Route::get('/', function () {
+    return view('welcome');
+});
+
 Route::resource('haikus', 'HaikusController');
