@@ -19,7 +19,7 @@ class HaikusController extends Controller
     {
           $haikus = Haiku::all();
 
-        return view('haikus.index', [
+        return view('welcome', [
             'haikus' => $haikus,
         ]);
     }

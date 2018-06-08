@@ -23,8 +23,8 @@
                             </ul>
                         </li>
                     @else
-                        <li>{!! link_to_route('signup.get', 'Signup') !!}</li>
-                        <li>{!! link_to_route('login', 'Login') !!}</li>
+                        <li>{!! link_to_route('signup.get', '一見さん') !!}</li>
+                        <li>{!! link_to_route('login', '常連さん') !!}</li>
                     @endif
                 </ul>
             </div>
