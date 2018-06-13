@@ -32,5 +32,11 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout.get');
 
 Route::group(['middleware' => ['auth']], function () {
     Route::resource('users', 'UsersController', ['only' => ['index', 'show']]);
+    Route::group(['prefix' => 'users/{id}'], function () {
+        Route::post('like', 'UserLikeController@store')->name('user.like');
+        Route::delete('unlike', 'UserLikeController@destroy')->name('user.unlike');
+        Route::get('likings', 'UsersController@likings')->name('users.likings');
+    });
+    
     Route::resource('haikus', 'HaikusController', ['only' => ['store', 'destroy']]);
 });

@@ -20,6 +20,9 @@
            <p>{{ $haiku->third}}</p>
         </h2>
         
+       <center>@include('user_like.like_button', ['haiku' => $haiku])</center>
+       {{ $count_likings }}
+        
         <div class="aratamu">
             {!! link_to_route('haikus.edit', 'この句をあらたむ', ['id' => $haiku->id], ['class' => 'btn btn-success']) !!}
         </div>    
